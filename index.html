@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Audio Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Simple Audio Visualizer</h1>
+            <p class="subtitle">See sound in a circular pattern using your microphone</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="visualizer-container">
+                <canvas id="audioCanvas"></canvas>
+                <div class="center-circle"></div>
+            </div>
+            
+            <div class="controls">
+                <h2>Controls</h2>
+                
+                <div class="button-group">
+                    <button id="startBtn" class="btn btn-start">
+                        Start Microphone
+                    </button>
+                    <button id="stopBtn" class="btn btn-stop" disabled>
+                        Stop
+                    </button>
+                </div>
+                
+                <div class="status" id="status">
+                    🔴 Microphone: Off
+                </div>
+                
+                <div class="slider-group">
+                    <div class="slider">
+                        <label for="sensitivity">Sensitivity</label>
+                        <input type="range" id="sensitivity" min="1" max="100" value="50">
+                        <span id="sensitivityValue">50</span>
+                    </div>
+                    
+                    <div class="slider">
+                        <label for="bars">Number of Bars</label>
+                        <input type="range" id="bars" min="20" max="100" value="60">
+                        <span id="barsValue">60</span>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>How to use:</h3>
+                    <ol>
+                        <li>Click "Start Microphone"</li>
+                        <li>Allow microphone access when prompted</li>
+                        <li>Speak or play music to see the visualization</li>
+                        <li>Adjust sensitivity as needed</li>
+                        <li>Click "Stop" when done</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Built with Web Audio API for learning purposes</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
