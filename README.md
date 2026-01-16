@@ -1,1 +1,1 @@
-# Audio-Equalizer
+# Audio-Visualizer
